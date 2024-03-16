@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        stage('test')
+        stage('test'){
             steps{
                 script{
                     def scannerHome = tool 'sonar';
