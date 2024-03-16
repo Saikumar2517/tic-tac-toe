@@ -1,5 +1,5 @@
 pipeline {
-    ageny any
+    agent any
     environment {
         DOCKER_REGISTRY = 'saidocker999/musicplayer'
     }
@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        stage{
+        stage('test')
             steps{
                 script{
                     def scannerHome = tool 'sonar';
@@ -34,4 +34,3 @@ pipeline {
         }
     }
 
-}
